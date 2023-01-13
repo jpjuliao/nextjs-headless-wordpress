@@ -9,7 +9,7 @@ function Error404( {data} ) {
 	return (
 		<>
 			<Header header={header} headerMenus={headerMenus?.edges}/>
-			<div className="h-almost-screen">
+			<div className="h-almost-screen">HELLO WORLD
 				<section className="text-gray-600 body-font">
 					<div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 						<div
@@ -18,11 +18,7 @@ function Error404( {data} ) {
                                 Sorry No result found
 							</h1>
 							<div className="flex justify-center">
-								<Link href="/">
-									<a
-										className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Back
-                                        to Home
-									</a>
+								<Link href="/" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Back to Home
 								</Link>
 							</div>
 						</div>

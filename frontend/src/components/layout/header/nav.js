@@ -19,9 +19,7 @@ const Nav = ( {header, headerMenus, slug} ) => {
 		<nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
 			<div className="flex items-center flex-shrink-0 text-white mr-6">
 				<Link href="/">
-					<a>
 						<img src={header?.siteLogoUrl ?? ''} alt="" width="48" height="48" className="mr-4"/>
-					</a>
 				</Link>
 				<div className="flex flex-col items-start justify-start">
 					<span className="font-semibold text-xl tracking-tight">{header?.siteTitle}</span>
@@ -46,32 +44,26 @@ const Nav = ( {header, headerMenus, slug} ) => {
 						{ headerMenus?.map( menu => {
 							if ( ! isCustomPageUri( menu?.node?.path ) ) {
 								return  (
-									<Link key={menu?.node.id} href={menu?.node?.path}>
-										<a
+									<Link key={menu?.node.id} href={menu?.node?.path}
 											className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
 											data-cy="nav-item"
 										>
 											{menu?.node?.label}
-										</a>
 									</Link>
 								);
 							}
 						} ) }
-						<Link href={'/blog/'}>
-							<a
+						<Link href={'/blog/'}
 								className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
 								data-cy="nav-item"
 							>
                 Blog
-							</a>
 						</Link>
-						<Link href={'/news/'}>
-							<a
+						<Link href={'/news/'}
 								className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
 								data-cy="nav-item"
 							>
                 News
-							</a>
 						</Link>
 					</div>
 				) : null }

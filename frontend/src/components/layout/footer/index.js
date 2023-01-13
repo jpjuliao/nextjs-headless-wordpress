@@ -28,9 +28,7 @@ const Footer = ( {footer, footerMenus} ) => {
 							{ footerMenus.map( footerMenu => (
 								<li key={footerMenu?.node?.id}>
 									<Link href={footerMenu?.node?.path}>
-										<a>
 											{footerMenu?.node?.label}
-										</a>
 									</Link>
 								</li>
 							) ) }
